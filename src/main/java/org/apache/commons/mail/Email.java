@@ -473,8 +473,8 @@ public abstract class Email
     public void setHostName(final String aHostName)
     {
         checkSessionAlreadyInitialized();
-        this.hostName = "invalid.hostname";    //注入缺陷，错误的主机名
-        //this.hostName = aHostName;           //原主机名设置
+        //this.hostName = "invalid.hostname";    //注入缺陷，错误的主机名
+        this.hostName = aHostName;           //原主机名设置
     }
 
     /**
